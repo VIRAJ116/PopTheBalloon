@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.1s ease;
+  }
+
+  body {
+    background-image: url("./images/Balloons.jpg");
+    /* background-color: #10101a; */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: black;
+    /* margin-bottom: 20px; */
+  }
+
+  h2 {
+    padding-bottom: 20px;
+  }
+
+  .RegisterForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 40px;
+    background: transparent;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.306);
+  }
+
+  .inputField {
+    /* width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    margin-bottom: 30px;
+    position: relative;
+    width: 80%;
+    /* margin: 20px 0; */
+  }
+
+  .inputField label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  .inputField input {
+    background: transparent;
+    border: 2px solid transparent;
+    color: black;
+    border-bottom: 2px solid gray;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background-color: #5e28b0;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+  }
+
+  .btn:hover {
+    /* transform: scale(1.06); */
+    box-shadow: 0 0 5px #8F7CEC, 0 0 30px #8F7CEC, 0 0 30px #8F7CEC;
+  }
+
+  a, .submitRegis {
+    width: 80%;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background-color: #5e28b0;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+  }
+
+  a:hover, .submitRegis:hover {
+    box-shadow: 0 0 5px #8F7CEC, 0 0 30px #8F7CEC, 0 0 30px #8F7CEC;
+  }
+
+  /* a {
+    width: 70%;
+    margin: 0;
+    font-size: 12px;
+    color: rgb(121, 154, 226);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+    outline: none;
+  } */
+
+canvas {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
