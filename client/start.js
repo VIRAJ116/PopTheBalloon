@@ -1,31 +1,35 @@
-const userName = document.getElementById("userName");//fetch username
+const userName = document.getElementById("userName");
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// Set the canvas size
 canvas.width = window.innerWidth - 40;
 canvas.height = window.innerHeight - 220;
 
-// Create an array to hold the balloons
 const balloons = [];
 
 const colors = [
   { name: "Red", hex: "#FF0000" },
-  { name: "Green", hex: "#00FF00" },
-  { name: "Blue", hex: "#0000FF" },
-  { name: "Yellow", hex: "#FFFF00" },
-  { name: "Purple", hex: "#800080" },
+  // { name: "Green", hex: "#00FF00" },
+  // { name: "Blue", hex: "#0000FF" },
+  // { name: "Yellow", hex: "#FFFF00" },
+  // { name: "Purple", hex: "#800080" },
 ];
 
-const randomIndex = Math.floor(Math.random() * colors.length);//random index generate
-const randomColor = colors[randomIndex];//random colour from index
-const colorValue = randomColor.name;
+let randomIndex = Math.floor(Math.random() * colors.length);
+let randomColor = colors[randomIndex];
+let colorValue = randomColor.name;
 const pTag = document.getElementById("color-display");
 pTag.textContent = colorValue;
 
-// Set the balloon speed
-const balloonSpeed = 3;
+setInterval(() => {
+  randomIndex = Math.floor(Math.random() * colors.length);
+  randomColor = colors[randomIndex];
+  colorValue = randomColor.name;const pTag = document.getElementById("color-display");
+  pTag.textContent = colorValue;
+  }, 5000);
+
+const balloonSpeed = 7;
 
 canvas.addEventListener("click", popBalloon);
 
@@ -33,7 +37,6 @@ let gameOver = false;
 
 function animate() {
   if (gameOver) return;
-  // Clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Move and draw the balloons
@@ -150,7 +153,6 @@ function restartGame() {
     }
   }
   timer = gameDuration;
-  // timerLabel.textContent = `Timer: ${timer} sec`;
   score = 0;
   updateScore();
   gameOver = false;
@@ -159,4 +161,7 @@ function restartGame() {
 }
 
 // Create new balloons every second
-setInterval(createBalloon, 400);
+setInterval(createBalloon, 200);
+
+
+
